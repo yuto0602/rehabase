@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-lass DeviseCreateUsers < ActiveRecord::Migration[6.0]
+class DeviseCreateUsers < ActiveRecord::Migration[6.0]
   def change
     create_table :users do |t|
       #c# Database authenticatable
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
       t.string :user_name,          null: false
-      t.integer :occupation_id,      null: false
+      t.integer :occupation_id,     null: false
       t.string :last_name,          null: false
       t.string :first_name,         null: false
 
