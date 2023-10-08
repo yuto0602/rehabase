@@ -87,3 +87,11 @@ strong {
 .form-control:focus {
   box-shadow: none;
 }
+
+.form-control::placeholder {
+  color: #8b9eb6;
+}
+
+.indispensable {
+  color: #8b9eb6;
+}
