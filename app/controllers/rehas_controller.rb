@@ -1,0 +1,2 @@
+class RehasController < ApplicationController
+end
