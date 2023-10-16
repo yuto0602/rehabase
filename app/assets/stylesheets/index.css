@@ -82,12 +82,15 @@ h6 {
 }
 
 #header .logo {
-  font-size: 32px;
+  font-family: "Raleway", sans-serif;
+  font-size: 40px;
   margin: 0;
   padding: 0;
   line-height: 1;
   font-weight: 700;
   letter-spacing: 0.5px;
+  text-decoration: none;
+  color: #111;
 }
 
 #header .logo a {
@@ -380,12 +383,19 @@ h6 {
   font-size: 16px;
   letter-spacing: 1px;
   display: inline-block;
-  padding: 8px 30px 10px 30px;
+  padding: 8px 15px 10px 15px;
+  margin-right: 10px;
   border-radius: 4px;
   transition: 0.5s;
   color: #fff;
   background: #16df7e;
   box-shadow: 0 8px 28px rgba(22, 223, 126, 0.45);
+  width: 200px;
+  text-decoration: none;
+}
+
+#hero .btn-get-started:last-child {
+  margin-right: 0;
 }
 
 #hero .btn-get-started:hover {
