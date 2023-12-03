@@ -1,0 +1,49 @@
+<%= render "shared/header" %>
+
+<%= form_with(model: @post, local: true, html: { class: 'post-form-container' }) do |form| %>
+  <!-- カテゴリーの選択 -->
+  <div class="post-form-group">
+    <%= form.label :category %>
+    <%= form.select :category, options_for_select(['カテゴリー1', 'カテゴリー2', 'カテゴリー3']), {}, { class: 'post-form-control' } %>
+  </div>
+
+  <!-- 疾患名入力欄 -->
+  <div class="post-form-group">
+    <%= form.label :disease_name %>
+    <%= form.text_field :disease_name, class: 'post-form-control' %>
+  </div>
+
+  <!-- 合併症入力欄 -->
+  <div class="post-form-group">
+    <%= form.label :complication %>
+    <%= form.text_field :complication, class: 'post-form-control' %>
+  </div>
+
+  <!-- 患者のパーソナルな症状 -->
+  <div class="post-form-group">
+    <%= form.label :personal_symptoms %>
+    <%= form.text_area :personal_symptoms, class: 'post-form-control' %>
+  </div>
+
+  <!-- リハビリ内容 -->
+  <div class="post-form-group">
+    <%= form.label :rehabilitation_content %>
+    <%= form.text_area :rehabilitation_content, class: 'post-form-control' %>
+  </div>
+
+  <!-- エビデンスグレードの選択 -->
+  <div class="post-form-group">
+    <%= form.label :evidence_grade %>
+    <%= form.select :evidence_grade, options_for_select(['A', 'B', 'C', '未評価']), {}, { class: 'post-form-control' } %>
+  </div>
+
+  <!-- キーワード -->
+  <div class="post-form-group">
+    <%= form.label :keywords %>
+    <%= form.text_field :keywords, class: 'post-form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit '投稿する', class: 'post-btn-primary' %>
+  </div>
+<% end %>
