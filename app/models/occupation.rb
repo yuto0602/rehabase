@@ -4,9 +4,10 @@ class Occupation < ActiveHash::Base
     { id: 2, name: '理学療法士' },
     { id: 3, name: '作業療法士' },
     { id: 4, name: '言語聴覚士' },
-    { id: 4, name: 'その他' },
+    { id: 5, name: 'その他' },
   ]
 
   include ActiveHash::Associations
-  belongs_to :user
+  has_many :users
+
 end

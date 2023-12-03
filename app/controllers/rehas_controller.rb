@@ -27,5 +27,3 @@ class RehasController < ApplicationController
     )
   end
 end
-
-end
