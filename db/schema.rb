@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2023_10_13_025607) do
 
   create_table "rehas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "category", null: false
+    t.integer "category_id", null: false
     t.string "disease", null: false
     t.text "complication", null: false
     t.string "keyword", null: false

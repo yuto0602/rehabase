@@ -7,7 +7,7 @@
     <!-- カテゴリーの選択 -->
     <div class="post-form-group">
       <%= form.label :カテゴリー %>
-      <%= form.select :category, options_for_select(['カテゴリー1', 'カテゴリー2', 'カテゴリー3']), {}, { class: 'post-form-control' } %>
+      <%= form.collection_select(:category_id, Category.all, :id, :name, {}, {class:"post-form-control", id:"category"}) %>
     </div>
 
     <!-- 疾患名入力欄 -->
@@ -37,7 +37,7 @@
     <!-- エビデンスグレードの選択 -->
     <div class="post-form-group">
       <%= form.label :エビデンスグレード %>
-      <%= form.select :evidence_id, options_for_select(['A', 'B', 'C', '未評価']), {}, { class: 'post-form-control' } %>
+      <%= form.collection_select(:evidence_id, Evidence.all, :id, :name, {}, {class:"post-form-control", id:"evidence"}) %>
     </div>
 
     <!-- キーワード -->

@@ -29,7 +29,7 @@ class RehasController < ApplicationController
 
   def reha_params
     params.require(:reha).permit(
-      :category,
+      :category_id,
       :disease,
       :complication,
       :personality,

@@ -2,7 +2,7 @@ class CreateRehas < ActiveRecord::Migration[6.0]
   def change
     create_table :rehas do |t|
 
-      t.string :category,     null: false
+      t.integer :category_id, null: false
       t.string :disease,      null: false
       t.text :complication,   null: false
       t.string :keyword,      null: false
