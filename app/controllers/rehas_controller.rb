@@ -7,10 +7,22 @@ class RehasController < ApplicationController
   def create
     @reha = Reha.new(reha_params)
     if @reha.save
-      redirect_to @reha, notice: '記事が正常に投稿されました。'
+      redirect_to root_path
     else
       render :new
     end
+  end
+
+  def show
+  end
+
+  def edit
+  end
+
+  def update
+  end
+
+  def destroy
   end
 
   private
@@ -24,6 +36,6 @@ class RehasController < ApplicationController
       :rehabilitation,
       :evidence_id,
       :keyword
-    )
+    ).merge(user_id: current_user.id)
   end
 end
