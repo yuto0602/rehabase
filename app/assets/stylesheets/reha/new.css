@@ -1,24 +1,19 @@
+/* 投稿フォームのCSS */
+
 /* 投稿フォームの外側のコンテナ */
 .post-form-container {
-  background-color: #f0f3f5; 
-  padding-top: 90px; 
-}
-
-/* 投稿フォームのヘッダースタイル */
-.post-form-header {
-  text-align: center;
-  font-size: 24px;
-  margin-bottom: 20px;
+  background-color: white;
+  padding-top: 150px;
 }
 
 /* 投稿フォーム本体のスタイル */
-.post-form-box {
+.post-form-container .post-form-box {
   background-color: #fff; 
   padding: 15px 20px;
   margin: 30px auto;
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 5px;
-  max-width: 450px;
+  max-width: 800px;
 }
 
 /* 投稿フォームのフォームグループ */
@@ -37,7 +32,7 @@
 .post-form-control {
   background: none;
   height: 40px;
-  border: none;
+  border:1px solid #1c8ac9;
   border-radius: 5px;
   box-shadow: none;
   color: #8b9eb6;
