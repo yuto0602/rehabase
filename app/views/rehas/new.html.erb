@@ -4,6 +4,12 @@
 
 <%= form_with(model: @reha, local: true, html: { class: 'post-form-container' }) do |form| %>
   <div class="post-form-box">
+    <!-- タイトル -->
+    <div class="post-form-group">
+      <%= form.label :タイトル %>
+      <%= form.text_field :title, class: 'post-form-control' %>
+    </div>
+
     <!-- カテゴリーの選択 -->
     <div class="post-form-group">
       <%= form.label :カテゴリー %>

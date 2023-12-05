@@ -1,5 +1,9 @@
 class RehasController < ApplicationController
 
+  def index
+    @rehas = Reha.all
+  end
+
   def new
     @reha = Reha.new
   end
@@ -29,6 +33,7 @@ class RehasController < ApplicationController
 
   def reha_params
     params.require(:reha).permit(
+      :title,
       :category_id,
       :disease,
       :complication,

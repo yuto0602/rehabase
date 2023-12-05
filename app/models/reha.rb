@@ -5,6 +5,7 @@ class Reha < ApplicationRecord
   belongs_to :category
   belongs_to :evidence
 
+  validates :title, presence: true
   validates :category_id, presence: true
   validates :category_id, numericality: { other_than: 1 }
   validates :disease, presence: true
