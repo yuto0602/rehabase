@@ -17,6 +17,10 @@ class RehasController < ApplicationController
     end
   end
 
+  def search
+    @rehas = Reha.search(params[:query])
+  end
+
   def show
   end
 
