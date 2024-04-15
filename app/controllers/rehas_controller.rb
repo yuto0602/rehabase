@@ -18,7 +18,8 @@ class RehasController < ApplicationController
   end
 
   def search
-    @rehas = Reha.search(params[:query])
+    @keyword = params[:query]
+    @rehas = Reha.where("title LIKE ? OR disease LIKE ? OR complication LIKE ? OR keyword LIKE ? OR personality LIKE ? OR rehabilitation LIKE ?", "%#{@keyword}%", "%#{@keyword}%", "%#{@keyword}%", "%#{@keyword}%", "%#{@keyword}%", "%#{@keyword}%")
   end
 
   def show

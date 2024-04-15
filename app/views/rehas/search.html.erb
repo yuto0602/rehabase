@@ -1,47 +1,17 @@
 <%= render "shared/header" %>
 
-<section id="testimonials" class="testimonials section-bg">
-  <div class="container">
+<% if @rehas.any? %>
+  <h2>検索結果</h2>
+  <ul>
+    <% @rehas.each do |reha| %>
+      <li><%= reha.title %></li>
+      <!-- 他の記事情報も表示できるように適宜追加してください -->
+    <% end %>
+  </ul>
+<% else %>
+  <p>該当する記事は見つかりませんでした。</p>
+<% end %>
 
-    <div class="section-title">
-      <span>Popularity</span>
-      <h2>Popularity</h2>
-      <p>なにを書くか考え中</p>
-    </div>
-
-    <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-      <div class="swiper-wrapper">
-
-        <div class="swiper-slide">
-          <div class="testimonial-item">
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              人気記事1のタイトル
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-            <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-            <h3>リハ太郎</h3>
-            <h4>職種</h4>
-          </div>
-        </div><!-- End -->
-
-        <div class="swiper-slide">
-          <div class="testimonial-item">
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-            <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-            <h3>Sara Wilsson</h3>
-            <h4>Designer</h4>
-          </div>
-        </div><!-- End -->
-
-    <div class="swiper-pagination"></div>
-  </div>
-
-</div>
 
 <%= render "shared/footer" %>
 
