@@ -12,12 +12,12 @@
         </div>
 
         <div class="row footer-newsletter justify-content-center">
-          <div class="col-lg-6">
-            <form action="" method="post">
-              <input type="email" name="email" placeholder="リハビリを探す"><input type="submit" value="検索">
-            </form>
-          </div>
+          <%= form_with(url: search_rehas_path, method: :get, class: "search-form") do |form| %>
+          <%= form.text_field :query, value: @keyword, placeholder: "キーワードを入力", class: "search-input" %>
+          <%= form.submit "検索", class: "search-btn" %>
+          <% end %>
         </div>
+
 <%# 
         <div class="social-links">
           <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>

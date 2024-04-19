@@ -1,0 +1,12 @@
+<div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+  <div class="icon-box">
+    <div class="icon"></div>
+    <h4><%= link_to reha.title, reha_path(reha) %></h4>
+    <span>カテゴリー</span>
+    <p><%= Category.find(reha.category_id).name %></p>
+    <span>エビデンスグレード</span>
+    <p><%= Evidence.find(reha.evidence_id).name %></p>
+    <span>キーワード</span>
+    <p><%= reha.keyword %></p>
+  </div>
+</div>
