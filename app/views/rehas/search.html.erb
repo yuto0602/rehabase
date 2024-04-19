@@ -1,0 +1,17 @@
+<%= render "shared/header" %>
+
+<% if @rehas.any? %>
+  <h2>検索結果</h2>
+  <ul>
+    <% @rehas.each do |reha| %>
+      <li><%= reha.title %></li>
+      <!-- 他の記事情報も表示できるように適宜追加してください -->
+    <% end %>
+  </ul>
+<% else %>
+  <p>該当する記事は見つかりませんでした。</p>
+<% end %>
+
+
+<%= render "shared/footer" %>
+

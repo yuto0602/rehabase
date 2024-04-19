@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <html lang="en">
     <title>Rihabase</title>
 
     <%= csrf_meta_tags %>
@@ -17,6 +16,8 @@
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_pack_tag 'application' %>
+    <%= javascript_pack_tag 'main' %> <!-- 追加 -->
+
     <%= stylesheet_pack_tag 'application', media: 'all' %>
 
     <!-- Favicons -->
@@ -28,13 +29,18 @@
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"> <!-- 追加 -->
+
     <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+
   </head>
 
   <body>

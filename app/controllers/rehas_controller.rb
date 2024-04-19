@@ -1,5 +1,9 @@
 class RehasController < ApplicationController
 
+  def index
+    @rehas = Reha.all
+  end
+
   def new
     @reha = Reha.new
   end
@@ -11,6 +15,11 @@ class RehasController < ApplicationController
     else
       render :new
     end
+  end
+
+  def search
+    @keyword = params[:query]
+    @rehas = Reha.where("title LIKE ? OR disease LIKE ? OR complication LIKE ? OR keyword LIKE ? OR personality LIKE ? OR rehabilitation LIKE ?", "%#{@keyword}%", "%#{@keyword}%", "%#{@keyword}%", "%#{@keyword}%", "%#{@keyword}%", "%#{@keyword}%")
   end
 
   def show
@@ -30,6 +39,7 @@ class RehasController < ApplicationController
 
   def reha_params
     params.require(:reha).permit(
+      :title,
       :category_id,
       :disease,
       :complication,
