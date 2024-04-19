@@ -1,1 +1,10 @@
-<h1>show html</h1>
+<h1>投稿詳細</h1>
+
+<p>カテゴリー: <%= @post.category %></p>
+<p>疾患: <%= @post.disease %></p>
+<p>合併症: <%= @post.complication %></p>
+<p>キーワード: <%= @post.keyword %></p>
+<p>性格: <%= @post.personality %></p>
+<p>リハビリテーション: <%= @post.rehabilitation %></p>
+<p>エビデンスID: <%= @post.evidence_id %></p>
+<p>投稿者: <%= @post.user.email %></p>
