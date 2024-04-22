@@ -1,10 +1,67 @@
-<h1>投稿詳細</h1>
+<!-- 投稿詳細ページのHTML -->
 
-<p>カテゴリー: <%= @post.category %></p>
-<p>疾患: <%= @post.disease %></p>
-<p>合併症: <%= @post.complication %></p>
-<p>キーワード: <%= @post.keyword %></p>
-<p>性格: <%= @post.personality %></p>
-<p>リハビリテーション: <%= @post.rehabilitation %></p>
-<p>エビデンスID: <%= @post.evidence_id %></p>
-<p>投稿者: <%= @post.user.email %></p>
+<div class="post-detail-container">
+  <div class="post-detail-box">
+    <h1 class="post-detail-title">投稿詳細</h1>
+
+    <div class="post-detail-category">
+      <div class="post-detail-content">
+        <p class="post-detail-label">カテゴリー</p>
+        <p><%= Category.find(@reha.category_id).name %></p>
+      </div>
+    </div>
+
+    <div class="post-detail-category">
+      <div class="post-detail-content">
+        <p class="post-detail-label">疾患:</p>
+        <p><%= @reha.disease %></p>
+      </div>
+    </div>
+
+    <div class="post-detail-category">
+      <div class="post-detail-content">
+        <p class="post-detail-label">合併症</p>
+        <p><%= @reha.complication %></p>
+      </div>
+    </div>
+
+    <div class="post-detail-category">
+      <div class="post-detail-content">
+        <p class="post-detail-label">キーワード</p>
+        <p><%= @reha.keyword %></p>
+      </div>
+    </div>
+
+    <div class="post-detail-category">
+      <div class="post-detail-content">
+        <p class="post-detail-label">性格</p>
+        <p><%= @reha.personality %></p>
+      </div>
+    </div>
+
+    <div class="post-detail-category">
+      <div class="post-detail-content">
+        <p class="post-detail-label">リハビリテーション</p>
+        <p><%= @reha.rehabilitation %></p>
+      </div>
+    </div>
+
+    <div class="post-detail-category">
+      <div class="post-detail-content">
+        <p class="post-detail-label">エビデンスグレード</p>
+        <p><%= Evidence.find(@reha.evidence_id).name %></p>
+      </div>
+    </div>
+
+    <div class="post-detail-category">
+      <div class="post-detail-content">
+        <p class="post-detail-label">投稿者</p>
+        <p><%= @reha.user.email %></p>
+      </div>
+    </div>
+
+    <!-- 追加のスタイルが必要な場合はここに追加してください -->
+
+  </div>
+</div>
+

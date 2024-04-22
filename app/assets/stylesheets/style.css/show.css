@@ -1,0 +1,46 @@
+/* 投稿詳細ページのCSS */
+
+/* 投稿詳細ページの外側のコンテナ */
+.post-detail-container {
+  background-color: #f0f8ff; /* 水色 */
+  padding-top: 50px;
+  display: flex; /* コンテンツを中央に寄せるために flex を使用 */
+  justify-content: center; /* コンテンツを水平方向に中央に配置 */
+  align-items: center; /* コンテンツを垂直方向に中央に配置 */
+  min-height: 100vh; /* ページ全体を画面に合わせる */
+}
+
+/* 投稿詳細ページの本体のスタイル */
+.post-detail-box {
+  background-color: #fff; 
+  padding: 20px;
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+  max-width: 800px;
+  width: 90%; /* 幅を調整 */
+}
+
+/* タイトルのスタイル */
+.post-detail-title {
+  font-size: 36px; /* 大きめの文字サイズ */
+  color: #333; /* デフォルトの文字色 */
+  margin-bottom: 20px; /* 下部の余白 */
+}
+
+/* 投稿内容のカテゴリーごとのスタイル */
+.post-detail-category {
+  margin-top: 30px; /* 各カテゴリーごとに間隔を開ける */
+}
+
+/* 投稿内容のラベルのスタイル */
+.post-detail-label {
+  font-weight: bold; /* 太字 */
+  margin-bottom: 5px; /* 下部の余白 */
+}
+
+/* 投稿内容のコンテンツのスタイル */
+.post-detail-content {
+  margin-bottom: 15px; /* 下部の余白 */
+  color: #444; /* 文字色を少し濃く */
+}
+
