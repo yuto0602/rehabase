@@ -60,7 +60,37 @@
       </div>
     </div>
 
-    <!-- 追加のスタイルが必要な場合はここに追加してください -->
+    <% if user_signed_in? %>
+      <% if current_user.id == @reha.user_id %>
+        <%= link_to "編集", edit_reha_path(@reha), class: "post-edit-btn" %>
+        <%= link_to "削除", reha_path(@reha), method: :delete, class: "post-delete-btn" %> 
+      <% end %>
+    <% end %>
+
+    <% if user_signed_in? %>
+      <!-- ユーザーがログインしている場合のみコメントフォームを表示 -->
+      <div class="comment-form">
+        <%= form_with(model: [ @reha, @reha.comments.build ], local: true) do |form| %>
+          <div class="field">
+            <%= form.text_area :content, placeholder: "コメントを入力してください", class: "comment-textarea" %>
+          </div>
+          <div class="actions">
+            <%= form.submit "コメントする", class: "comment-submit" %>
+          </div>
+        <% end %>
+      </div>
+    <% else %>
+      <p>コメントを投稿するには<a href="<%= new_user_session_path %>">ログイン</a>してください。</p>
+    <% end %>
+
+    <!-- コメント一覧 -->
+
+    <% @reha.comments.each do |comment| %>
+      <div class="comment">
+        <p class="comment-content"><%= comment.content %></p>
+        <p class="comment-user">投稿者: <%= comment.user.email %></p>
+      </div>
+    <% end %>
 
   </div>
 </div>

@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_10_13_025607) do
+ActiveRecord::Schema.define(version: 2024_04_28_031136) do
+
+  create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.text "comment_content", null: false
+    t.bigint "user_id", null: false
+    t.bigint "reha_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["reha_id"], name: "index_comments_on_reha_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
 
   create_table "rehas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
@@ -43,5 +53,7 @@ ActiveRecord::Schema.define(version: 2023_10_13_025607) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "comments", "rehas"
+  add_foreign_key "comments", "users"
   add_foreign_key "rehas", "users"
 end
